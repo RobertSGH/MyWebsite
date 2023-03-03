@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo"><img src="./images/logo.jpg" /></a>
+      <div class="bx bx-menu" id="menu-icon"></div>
+
+      <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </header>
+
+    <section class="home" id="home">
+      <div class="home-text">
+        <h4>Hi,</h4>
+        <h1>I'm Rob</h1>
+        <br />
+        <h3>Front<span>End</span> Developer</h3>
+        <p>
+          I'm passionate about creating websites with focus on custom design.
+        </p>
+        <a href="#" class="btn">Reach Out</a>
+      </div>
+      <div class="sphere-container">
+        <div class="sphere-wrapper">
+          <div class="sphere">
+            <div class="word html">HTML</div>
+            <div class="word css">CSS</div>
+            <div class="word javascript">JS</div>
+            <div class="word python">Python</div>
+            <div class="word java">Java</div>
+            <div class="word php">PHP</div>
+            <div class="word ruby">Ruby</div>
+            <div class="word cpp">C++</div>
+            <div class="word swift">Swift</div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="about" id="about">
+      <div class="about-text">
+        <h2>About me & Skills</h1>
+        <h3>
+          With expertise in React, Vanilla JS, and CSS, I specialize in building
+          sleek and stylish web applications that are both visually stunning and
+          user-friendly. Whether you're looking for a portfolio site that
+          showcases your work, an e-commerce platform that drives sales, or
+          anything in between, I'm here to help bring your vision to life.
+        </h3>
+      </div>
+      <div class="progress-bars-wrapper">
+        <div class="progress-bar">
+          <p class="progress-text">HTML</p>
+          <div class="progress-percent"></div>
+        </div>
+        <div class="progress-bar">
+          <p class="progress-text">CSS</p>
+          <div class="progress-percent"></div>
+        </div>
+        <div class="progress-bar">
+          <p class="progress-text">JavaScript</p>
+          <div class="progress-percent"></div>
+        </div>
+        <div class="progress-bar">
+          <p class="progress-text">ReactJS</p>
+          <div class="progress-percent"></div>
+        </div>
+        <div class="progress-bar">
+          <p class="progress-text">NodeJS</p>
+          <div class="progress-percent"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio" id="portfolio">
+      <div class="main-text">
+        <h2>My Portfolio</h2>
+        <h4>Projects</h4>
+      </div>
+
+      <div class="portfolio-content">
+        <div class="row">
+          <a href="https://ureventspot.web.app/" target="_blank" rel="noopener noreferrer">
+          <img src='./images/SC.png'/>
+          <div class="main-row">
+            <div class="row-text">
+              <h6>Development</h6>
+            </div>
+          </div>
+          <h3>Web App</h3>
+        </a>
+        </div>
+
+        <div class="row">
+          <a href="https://ureventspot.web.app/" target="_blank" rel="noopener noreferrer">
+          <img src='./images/SC.png'/>
+          <div class="main-row">
+            <div class="row-text">
+              <h6>Development</h6>
+            </div>
+          </div>
+          <h3>Web App</h3>
+        </a>
+        </div>
+
+        <div class="row">
+          <a href="https://ureventspot.web.app/" target="_blank" rel="noopener noreferrer">
+          <img src='./images/SC.png'/>
+          <div class="main-row">
+            <div class="row-text">
+              <h6>Development</h6>
+            </div>
+          </div>
+          <h3>Web App</h3>
+        </a>
+        </div>
+        
+      </div>
+
+      </section>
+
+      <section class='contact' id='contact'>
+        <div class="contact-map">
+          <div id="map"></div>
+          <div class='contact-text'>
+            <div id="contact-form">
+              <h2>Get in touch</h2>
+              <form id="contact-form-fields">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+                <button class='btn' type="submit">Send</button>
+              </form>            
+            </div> 
+          </div>
+        </div>
+        <div class='contact-icons'>
+          <a href='#'><i class='bx bxl-twitter'></i></a>
+          <a href='#'><i class='bx bxl-linkedin' ></i></a>
+          <a href='#'><i class='bx bxl-github' ></i></a>
+        </div>
+      </section>
+
+      <footer>
+        <p>@2023 by Robert</p>
+      </footer>
+      <a href='#' class='top'><i class='bx bx-up-arrow-alt'></i></a>
+
+      <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    
+  </body>
+</html>
