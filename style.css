@@ -61,6 +61,15 @@ header.sticky {
   border-bottom: 1px solid #1a295c;
 }
 
+footer {
+  text-align: center;
+  padding: 15px;
+  color: var(--second-color);
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
 @media (max-width: 1325px) {
   header {
     padding: 16px 3%;
@@ -114,15 +123,6 @@ header.sticky {
     --h1-font: 3.7rem;
     --h2-font: 2.7rem;
   }
-}
-
-footer {
-  text-align: center;
-  padding: 15px;
-  color: var(--second-color);
-  font-size: 15px;
-  font-weight: 300;
-  letter-spacing: 1px;
 }
 
 .top {
@@ -185,7 +185,6 @@ footer {
 
 .home {
   height: 100vh;
-  width: 100%;
   position: relative;
   align-items: center;
   justify-content: flex-start;
@@ -240,6 +239,7 @@ footer {
   font-size: 24px;
   font-weight: 600;
   margin-bottom: 2rem;
+  text-align: justify;
 }
 
 .about-text h4 {
@@ -278,7 +278,6 @@ footer {
 /* PROGRESS BAR */
 
 .progress-bar {
-  width: 35rem;
   height: 1rem;
   background-color: var(--second-color);
   margin: 3rem 0;
@@ -450,27 +449,39 @@ footer {
   transform: translate(-50%, -50%);
 }
 
+/* PORTFOLIO */
+
 .portfolio-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, auto));
-  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  align-items: start;
   gap: 2rem;
   margin-top: 5rem;
 }
 
-.row img {
-  height: auto;
+.row {
+  padding: 55px;
+  background: #12141c;
+  border-radius: 0.5rem;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.image-container {
   width: 100%;
-  height: 100%;
+  height: 200px; /* Set a fixed height for the image container */
+  overflow: hidden;
   border-radius: 0.5rem;
   margin-bottom: 1.5rem;
 }
 
-.row {
-  padding: 25px;
-  background: #12141c;
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures images maintain their aspect ratio and cover the container */
   border-radius: 0.5rem;
-  transition: all 0.4s ease;
 }
 
 .main-row {

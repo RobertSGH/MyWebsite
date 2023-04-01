@@ -21,6 +21,8 @@ const onScroll = () => {
 
 window.addEventListener('scroll', onScroll);
 
+// SPHERE
+
 const sphereContainer = document.querySelector('.sphere-container');
 const sphere = sphereContainer.querySelector('.sphere');
 const words = sphere.querySelectorAll('.word');
@@ -37,6 +39,8 @@ sphereContainer.addEventListener('mousemove', (event) => {
   const angleY = deltaX / 20;
   sphere.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg)`;
 });
+
+//MAP
 
 const map = L.map('map', {
   center: [49.064192, 24.945167],
@@ -70,10 +74,13 @@ document
     window.location.href = emailLink;
   });
 
+// BUTTONS-NAV
+
 let menu = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
 let scrollUp = document.querySelector('.top');
 let aboutSection = document.querySelector('#about');
+let reachOutBtn = document.querySelector('.btn');
 
 menu.onclick = () => {
   menu.classList.toggle('bx-x');
@@ -90,6 +97,16 @@ window.onscroll = () => {
     scrollUp.style.display = 'none';
   }
 };
+
+reachOutBtn.addEventListener('click', function (event) {
+  event.preventDefault();
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: 'smooth',
+  });
+});
+
+// ELEMENTS-REVEAL
 
 const sr = ScrollReveal({
   distance: '25px',
